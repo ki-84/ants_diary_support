@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アリさん日記 - 100匹のコロニーを育成する戦略ゲーム</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        .footer-links {
+            margin-top: 20px;
+        }
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .app-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">🐜</div>
+            <h1>アリさん日記</h1>
+            <p class="subtitle">100匹のコロニーを育成する戦略ゲーム</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>ゲームについて</h2>
+                <p>「アリさん日記」は、アリのコロニーを育成する本格的なリアルタイム戦略ゲームです。女王アリを中心に、働きアリたちの役割を調整しながら、敵の襲撃を乗り越えて100匹のコロニーを築き上げましょう。</p>
+            </div>
+
+            <div class="section">
+                <h2>ゲームの特徴</h2>
+
+                <div class="feature">
+                    <h3>🐜 4つの役割で戦略を立てる</h3>
+                    <ul>
+                        <li><strong>採餌係(緑)</strong>: 地上で食料を集めて巣に運ぶ</li>
+                        <li><strong>育児係(ピンク)</strong>: 幼虫を育てて新しい働きアリに</li>
+                        <li><strong>兵隊アリ(赤)</strong>: 地上で敵と戦って仲間を守る</li>
+                        <li><strong>休息係(青)</strong>: 巣で体力を回復する</li>
+                    </ul>
+                </div>
+
+                <div class="feature">
+                    <h3>🗺 地上と巣の2つの世界</h3>
+                    <ul>
+                        <li><strong>地上</strong>: 食料を採取して巣に運ぶ。敵も出現</li>
+                        <li><strong>巣</strong>: 幼虫を育て、部屋を掘って拡張する安全な場所</li>
+                    </ul>
+                    <p>2つの視点を切り替えながら、コロニー全体を管理しましょう。</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⚔️ 波状攻撃を防衛せよ</h3>
+                    <p>時間経過とともに、敵の襲撃がどんどん激しくなります。事前に兵隊アリを増やして備えないと、コロニーは全滅してしまいます。</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⏱ スコアアタックに挑戦</h3>
+                    <p>100匹達成までの時間がスコアになります。最短記録を目指して、何度も挑戦しましょう!</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>こんな人におすすめ</h2>
+                <ul>
+                    <li>アリや昆虫が好きな方</li>
+                    <li>リアルタイム戦略ゲームが好きな方</li>
+                    <li>手軽に遊べるカジュアルゲームが好きな方</li>
+                    <li>時間管理とリソース配分が好きな方</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>ゲームの流れ</h2>
+                <ol>
+                    <li>女王アリが卵を産み続ける</li>
+                    <li>育児係が幼虫を育てて働きアリに成長</li>
+                    <li>採餌係が食料を集めてコロニーを維持</li>
+                    <li>兵隊アリが敵から仲間を守る</li>
+                </ol>
+                <p style="margin-top: 15px;">バランスを保ちながら、100匹のコロニーを目指しましょう!</p>
+                <p>サクッと遊べる戦略ゲーム。1プレイ5〜15分で100匹達成を目指せ!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 アリさん日記. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
