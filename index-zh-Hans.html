@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蚂蚁日记 - 培育100只蚂蚁殖民地的策略游戏</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 720px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; text-align: center; }
+        h1 { font-size: 2em; margin-bottom: 10px; }
+        .subtitle { font-size: 1.1em; opacity: 0.95; }
+        .content { padding: 40px 30px; }
+        .section { margin-bottom: 35px; }
+        h2 { color: #667eea; margin-bottom: 15px; font-size: 1.4em; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .highlight { background: #f8f9fa; padding: 15px; border-left: 4px solid #667eea; border-radius: 4px; margin: 20px 0; }
+        .faq-item { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea; }
+        .faq-question { font-weight: 600; color: #764ba2; margin-bottom: 10px; font-size: 1.1em; }
+        .faq-answer { color: #555; }
+        .feature { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
+        .feature h3 { color: #764ba2; margin-bottom: 10px; }
+        .contact-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; }
+        .contact-button { display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: transform 0.2s; }
+        .contact-button:hover { transform: scale(1.05); }
+        footer { background: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e9ecef; }
+        .footer-links { margin-top: 20px; }
+        .footer-links a { color: #667eea; text-decoration: none; margin: 0 15px; font-weight: 500; }
+        .footer-links a:hover { text-decoration: underline; }
+        .app-icon { font-size: 3em; margin-bottom: 15px; }
+        .last-updated { color: #6c757d; font-size: 0.9em; margin-top: 30px; text-align: right; }
+        a { color: #667eea; }
+        .lang-switcher { text-align: center; padding: 10px; background: #f0f0f0; font-size: 0.85em; }
+        .lang-switcher a { color: #667eea; text-decoration: none; margin: 0 6px; }
+    </style>
+</head>
+<body>
+    <div class="lang-switcher"><a href="index.html">日本語</a> | <a href="index-en.html">English</a> | <a href="index-zh-Hans.html">简体中文</a> | <a href="index-zh-Hant.html">繁體中文</a> | <a href="index-ko.html">한국어</a> | <a href="index-th.html">ไทย</a> | <a href="index-es.html">Español</a> | <a href="index-fr.html">Français</a> | <a href="index-de.html">Deutsch</a> | <a href="index-pt-BR.html">Português</a> | <a href="index-it.html">Italiano</a></div>
+    <div class="container">
+        <header>
+            <div class="app-icon" style="font-size:4em;margin-bottom:20px">🐜</div>
+            <h1>蚂蚁日记</h1>
+            <p class="subtitle">培育100只蚂蚁殖民地的策略游戏</p>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>关于游戏</h2>
+                <p>「蚂蚁日记」是一款培育蚂蚁殖民地的正统实时策略游戏。以蚁后为中心，调整工蚁们的角色，克服敌人的袭击，建立100只蚂蚁的殖民地。</p>
+            </div>
+
+            <div class="section">
+                <h2>游戏特色</h2>
+                <div class="feature">
+                    <h3>🐜 四种角色制定战略</h3>
+                    <ul><li><strong>采集（绿色）</strong>：在地面收集食物运回巢穴</li><li><strong>育儿（粉色）</strong>：培育幼虫成为新工蚁</li><li><strong>士兵（红色）</strong>：在地面与敌人战斗保护同伴</li><li><strong>休息（蓝色）</strong>：在巢穴恢复体力</li></ul>
+                </div>
+
+                <div class="feature">
+                    <h3>🗺 地面与巢穴两个世界</h3>
+                    <ul><li><strong>地面</strong>：采集食物运回巢穴，也有敌人出没</li><li><strong>巢穴</strong>：培育幼虫、挖掘扩展的安全场所</li></ul><p>切换两个视角，管理整个殖民地。</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⚔️ 抵御波次攻击</h3>
+                    <p>随着时间推移，敌人的袭击越来越猛烈。需要提前增加士兵蚂蚁做好准备，否则殖民地将会全灭。</p>
+                </div>
+
+                <div class="feature">
+                    <h3>⏱ 挑战分数排名</h3>
+                    <p>达成100只的时间就是你的分数。挑战最短记录吧！</p>
+                </div>
+
+
+            </div>
+
+            <div class="section">
+                <h2>推荐人群</h2>
+                <ul><li>喜欢蚂蚁和昆虫的人</li><li>喜欢实时策略游戏的人</li><li>喜欢轻松休闲游戏的人</li><li>喜欢时间管理和资源分配的人</li></ul>
+            </div>
+
+            <div class="section">
+                <h2>游戏流程</h2>
+                <ol><li>蚁后不断产卵</li><li>育儿蚁培育幼虫成长为工蚁</li><li>采集蚁收集食物维持殖民地</li><li>士兵蚁保护同伴免受敌人攻击</li></ol><p style='margin-top:15px'>保持平衡，向100只蚂蚁的殖民地进发！</p><p>轻松畅玩的策略游戏。一局5-15分钟！</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 蚂蚁日记. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="support-zh-Hans.html">支持</a>
+                <a href="privacy-policy-zh-Hans.html">隐私政策</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
