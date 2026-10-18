@@ -1,100 +1,111 @@
-<!DOCTYPE html>
-<html lang="th">
+<!doctype html>
+<html lang="th" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ไดอารี่มด - เกมกลยุทธ์เลี้ยงมดอาณานิคม 100 ตัว</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 20px; }
-        .container { max-width: 720px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; text-align: center; }
-        h1 { font-size: 2em; margin-bottom: 10px; }
-        .subtitle { font-size: 1.1em; opacity: 0.95; }
-        .content { padding: 40px 30px; }
-        .section { margin-bottom: 35px; }
-        h2 { color: #667eea; margin-bottom: 15px; font-size: 1.4em; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
-        p { margin-bottom: 15px; }
-        ul, ol { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .highlight { background: #f8f9fa; padding: 15px; border-left: 4px solid #667eea; border-radius: 4px; margin: 20px 0; }
-        .faq-item { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea; }
-        .faq-question { font-weight: 600; color: #764ba2; margin-bottom: 10px; font-size: 1.1em; }
-        .faq-answer { color: #555; }
-        .feature { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
-        .feature h3 { color: #764ba2; margin-bottom: 10px; }
-        .contact-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; }
-        .contact-button { display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: transform 0.2s; }
-        .contact-button:hover { transform: scale(1.05); }
-        footer { background: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e9ecef; }
-        .footer-links { margin-top: 20px; }
-        .footer-links a { color: #667eea; text-decoration: none; margin: 0 15px; font-weight: 500; }
-        .footer-links a:hover { text-decoration: underline; }
-        .app-icon { font-size: 3em; margin-bottom: 15px; }
-        .last-updated { color: #6c757d; font-size: 0.9em; margin-top: 30px; text-align: right; }
-        a { color: #667eea; }
-        .lang-switcher { text-align: center; padding: 10px; background: #f0f0f0; font-size: 0.85em; }
-        .lang-switcher a { color: #667eea; text-decoration: none; margin: 0 6px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ไดอารี่มด | เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์</title>
+<meta name="description" content="เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์. ปกป้องมดราชินี สร้างอาณานิคม 100 ตัว!">
+<meta name="theme-color" content="#0d1c18">
+<meta name="apple-itunes-app" content="app-id=6760652790">
+<link rel="canonical" href="https://ki-84.github.io/ants_diary_support/index-th.html">
+<link rel="sitemap" type="application/xml" href="https://ki-84.github.io/ants_diary_support/sitemap.xml">
+<link rel="alternate" hreflang="ja" href="https://ki-84.github.io/ants_diary_support/">
+<link rel="alternate" hreflang="en" href="https://ki-84.github.io/ants_diary_support/index-en.html">
+<link rel="alternate" hreflang="ar" href="https://ki-84.github.io/ants_diary_support/index-ar.html">
+<link rel="alternate" hreflang="ca" href="https://ki-84.github.io/ants_diary_support/index-ca.html">
+<link rel="alternate" hreflang="cs" href="https://ki-84.github.io/ants_diary_support/index-cs.html">
+<link rel="alternate" hreflang="da" href="https://ki-84.github.io/ants_diary_support/index-da.html">
+<link rel="alternate" hreflang="de" href="https://ki-84.github.io/ants_diary_support/index-de.html">
+<link rel="alternate" hreflang="el" href="https://ki-84.github.io/ants_diary_support/index-el.html">
+<link rel="alternate" hreflang="es" href="https://ki-84.github.io/ants_diary_support/index-es.html">
+<link rel="alternate" hreflang="es-MX" href="https://ki-84.github.io/ants_diary_support/index-es-MX.html">
+<link rel="alternate" hreflang="fi" href="https://ki-84.github.io/ants_diary_support/index-fi.html">
+<link rel="alternate" hreflang="fr" href="https://ki-84.github.io/ants_diary_support/index-fr.html">
+<link rel="alternate" hreflang="he" href="https://ki-84.github.io/ants_diary_support/index-he.html">
+<link rel="alternate" hreflang="hi" href="https://ki-84.github.io/ants_diary_support/index-hi.html">
+<link rel="alternate" hreflang="hr" href="https://ki-84.github.io/ants_diary_support/index-hr.html">
+<link rel="alternate" hreflang="hu" href="https://ki-84.github.io/ants_diary_support/index-hu.html">
+<link rel="alternate" hreflang="id" href="https://ki-84.github.io/ants_diary_support/index-id.html">
+<link rel="alternate" hreflang="it" href="https://ki-84.github.io/ants_diary_support/index-it.html">
+<link rel="alternate" hreflang="ko" href="https://ki-84.github.io/ants_diary_support/index-ko.html">
+<link rel="alternate" hreflang="ms" href="https://ki-84.github.io/ants_diary_support/index-ms.html">
+<link rel="alternate" hreflang="nl" href="https://ki-84.github.io/ants_diary_support/index-nl.html">
+<link rel="alternate" hreflang="nb" href="https://ki-84.github.io/ants_diary_support/index-no.html">
+<link rel="alternate" hreflang="pl" href="https://ki-84.github.io/ants_diary_support/index-pl.html">
+<link rel="alternate" hreflang="pt-BR" href="https://ki-84.github.io/ants_diary_support/index-pt-BR.html">
+<link rel="alternate" hreflang="pt-PT" href="https://ki-84.github.io/ants_diary_support/index-pt-PT.html">
+<link rel="alternate" hreflang="ro" href="https://ki-84.github.io/ants_diary_support/index-ro.html">
+<link rel="alternate" hreflang="ru" href="https://ki-84.github.io/ants_diary_support/index-ru.html">
+<link rel="alternate" hreflang="sk" href="https://ki-84.github.io/ants_diary_support/index-sk.html">
+<link rel="alternate" hreflang="sv" href="https://ki-84.github.io/ants_diary_support/index-sv.html">
+<link rel="alternate" hreflang="th" href="https://ki-84.github.io/ants_diary_support/index-th.html">
+<link rel="alternate" hreflang="tr" href="https://ki-84.github.io/ants_diary_support/index-tr.html">
+<link rel="alternate" hreflang="uk" href="https://ki-84.github.io/ants_diary_support/index-uk.html">
+<link rel="alternate" hreflang="vi" href="https://ki-84.github.io/ants_diary_support/index-vi.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://ki-84.github.io/ants_diary_support/index-zh-Hans.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://ki-84.github.io/ants_diary_support/index-zh-Hant.html">
+<link rel="alternate" hreflang="pt" href="https://ki-84.github.io/ants_diary_support/index-pt-PT.html">
+<link rel="alternate" hreflang="x-default" href="https://ki-84.github.io/ants_diary_support/index-en.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ไดอารี่มด | เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์">
+<meta property="og:description" content="เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์. ปกป้องมดราชินี สร้างอาณานิคม 100 ตัว!">
+<meta property="og:url" content="https://ki-84.github.io/ants_diary_support/index-th.html">
+<meta property="og:image" content="https://ki-84.github.io/ants_diary_support/assets/og-th.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ไดอารี่มด — เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css?v=20261018">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "ไดอารี่มด", "url": "https://ki-84.github.io/ants_diary_support/index-th.html", "description": "เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์. ปกป้องมดราชินี สร้างอาณานิคม 100 ตัว!", "applicationCategory": "GameApplication", "applicationSubCategory": "Strategy", "operatingSystem": "iOS 17.0 or later", "inLanguage": "th", "installUrl": "https://apps.apple.com/app/id6760652790?l=th", "image": "https://ki-84.github.io/ants_diary_support/assets/icon.webp", "screenshot": ["https://ki-84.github.io/ants_diary_support/assets/screenshots/th/2_gameplay.webp", "https://ki-84.github.io/ants_diary_support/assets/screenshots/th/1_nest_after.webp", "https://ki-84.github.io/ants_diary_support/assets/screenshots/th/5_victory.webp"], "author": {"@type": "Person", "name": "Nobuaki Kuwabara"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6760652790?l=th"}}</script>
+<script src="assets/site.js?v=20261018" defer></script>
 </head>
 <body>
-    <div class="lang-switcher"><a href="index.html">日本語</a> | <a href="index-en.html">English</a> | <a href="index-zh-Hans.html">简体中文</a> | <a href="index-zh-Hant.html">繁體中文</a> | <a href="index-ko.html">한국어</a> | <a href="index-th.html">ไทย</a> | <a href="index-es.html">Español</a> | <a href="index-fr.html">Français</a> | <a href="index-de.html">Deutsch</a> | <a href="index-pt-BR.html">Português</a> | <a href="index-it.html">Italiano</a></div>
-    <div class="container">
-        <header>
-            <div class="app-icon" style="font-size:4em;margin-bottom:20px">🐜</div>
-            <h1>ไดอารี่มด</h1>
-            <p class="subtitle">เกมกลยุทธ์เลี้ยงมดอาณานิคม 100 ตัว</p>
-        </header>
-
-        <div class="content">
-            <div class="section">
-                <h2>เกี่ยวกับเกม</h2>
-                <p>「ไดอารี่มด」เป็นเกมกลยุทธ์เรียลไทม์ที่คุณต้องปกป้องมดราชินี ปรับบทบาทมดงาน และเอาชนะศัตรูเพื่อสร้างอาณานิคมมด 100 ตัว</p>
-            </div>
-
-            <div class="section">
-                <h2>จุดเด่นของเกม</h2>
-                <div class="feature">
-                    <h3>🐜 4 บทบาทในการวางกลยุทธ์</h3>
-                    <ul><li><strong>หาอาหาร (เขียว)</strong>: เก็บอาหารจากพื้นดินนำกลับรัง</li><li><strong>เลี้ยงดู (ชมพู)</strong>: เลี้ยงตัวอ่อนให้เป็นมดงานใหม่</li><li><strong>ทหาร (แดง)</strong>: ต่อสู้กับศัตรูบนพื้นดิน</li><li><strong>พักผ่อน (น้ำเงิน)</strong>: พักฟื้นในรัง</li></ul>
-                </div>
-
-                <div class="feature">
-                    <h3>🗺 โลกบนดินและในรัง</h3>
-                    <ul><li><strong>พื้นดิน</strong>: เก็บอาหาร ระวังศัตรู</li><li><strong>รัง</strong>: เลี้ยงตัวอ่อน ขยายห้อง</li></ul><p>สลับมุมมองเพื่อจัดการทั้งอาณานิคม</p>
-                </div>
-
-                <div class="feature">
-                    <h3>⚔️ ป้องกันการโจมตีเป็นระลอก</h3>
-                    <p>ยิ่งเวลาผ่านไป ศัตรูจะโจมตีรุนแรงขึ้น เตรียมมดทหารให้พร้อม!</p>
-                </div>
-
-                <div class="feature">
-                    <h3>⏱ ท้าทายสถิติเวลา</h3>
-                    <p>เวลาที่ใช้ถึง 100 ตัวคือคะแนนของคุณ ท้าทายสถิติที่ดีที่สุด!</p>
-                </div>
-
-
-            </div>
-
-            <div class="section">
-                <h2>แนะนำสำหรับ</h2>
-                <ul><li>คนที่ชอบมดและแมลง</li><li>คนที่ชอบเกมกลยุทธ์เรียลไทม์</li><li>คนที่ชอบเกมแคชชวล</li><li>คนที่ชอบการจัดการเวลาและทรัพยากร</li></ul>
-            </div>
-
-            <div class="section">
-                <h2>ขั้นตอนเกม</h2>
-                <ol><li>มดราชินีวางไข่ต่อเนื่อง</li><li>มดเลี้ยงดูเลี้ยงตัวอ่อนจนโตเป็นมดงาน</li><li>มดหาอาหารเก็บอาหารเลี้ยงอาณานิคม</li><li>มดทหารปกป้องเพื่อนจากศัตรู</li></ol><p style='margin-top:15px'>รักษาสมดุลและมุ่งสู่อาณานิคม 100 ตัว!</p><p>เกมกลยุทธ์เล่นง่าย จบเกมใน 5-15 นาที!</p>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 ไดอารี่มด. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="support-th.html">สนับสนุน</a>
-                <a href="privacy-policy-th.html">นโยบายความเป็นส่วนตัว</a>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+<a class="skip-link" href="#main">สำรวจเกม</a>
+<header class="header"><div class="nav wrap">
+<a class="brand" href="index-th.html" aria-label="ไดอารี่มด"><img src="assets/icon.webp" alt="" width="40" height="40"><span>ไดอารี่มด</span></a>
+<nav aria-label="สำรวจเกม"><a class="nav-explore" href="#worlds">สำรวจเกม</a>
+<details class="languages"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>ไทย</span><span aria-hidden="true">⌄</span></summary><div class="language-menu" aria-label="ภาษา"><a lang="ja" hreflang="ja" href="index.html" >日本語</a><a lang="en" hreflang="en" href="index-en.html" >English</a><a lang="ar" hreflang="ar" href="index-ar.html" >العربية</a><a lang="ca" hreflang="ca" href="index-ca.html" >Català</a><a lang="cs" hreflang="cs" href="index-cs.html" >Čeština</a><a lang="da" hreflang="da" href="index-da.html" >Dansk</a><a lang="de" hreflang="de" href="index-de.html" >Deutsch</a><a lang="el" hreflang="el" href="index-el.html" >Ελληνικά</a><a lang="es" hreflang="es" href="index-es.html" >Español</a><a lang="es-MX" hreflang="es-MX" href="index-es-MX.html" >Español (México)</a><a lang="fi" hreflang="fi" href="index-fi.html" >Suomi</a><a lang="fr" hreflang="fr" href="index-fr.html" >Français</a><a lang="he" hreflang="he" href="index-he.html" >עברית</a><a lang="hi" hreflang="hi" href="index-hi.html" >हिन्दी</a><a lang="hr" hreflang="hr" href="index-hr.html" >Hrvatski</a><a lang="hu" hreflang="hu" href="index-hu.html" >Magyar</a><a lang="id" hreflang="id" href="index-id.html" >Bahasa Indonesia</a><a lang="it" hreflang="it" href="index-it.html" >Italiano</a><a lang="ko" hreflang="ko" href="index-ko.html" >한국어</a><a lang="ms" hreflang="ms" href="index-ms.html" >Bahasa Melayu</a><a lang="nl" hreflang="nl" href="index-nl.html" >Nederlands</a><a lang="nb" hreflang="nb" href="index-no.html" >Norsk bokmål</a><a lang="pl" hreflang="pl" href="index-pl.html" >Polski</a><a lang="pt-BR" hreflang="pt-BR" href="index-pt-BR.html" >Português (Brasil)</a><a lang="pt-PT" hreflang="pt-PT" href="index-pt-PT.html" >Português (Portugal)</a><a lang="ro" hreflang="ro" href="index-ro.html" >Română</a><a lang="ru" hreflang="ru" href="index-ru.html" >Русский</a><a lang="sk" hreflang="sk" href="index-sk.html" >Slovenčina</a><a lang="sv" hreflang="sv" href="index-sv.html" >Svenska</a><a lang="th" hreflang="th" href="index-th.html" aria-current=page>ไทย</a><a lang="tr" hreflang="tr" href="index-tr.html" >Türkçe</a><a lang="uk" hreflang="uk" href="index-uk.html" >Українська</a><a lang="vi" hreflang="vi" href="index-vi.html" >Tiếng Việt</a><a lang="zh-Hans" hreflang="zh-Hans" href="index-zh-Hans.html" >简体中文</a><a lang="zh-Hant" hreflang="zh-Hant" href="index-zh-Hant.html" >繁體中文</a></div></details>
+</nav></div></header>
+<main id="main">
+<section class="hero"><div class="hero-glow" aria-hidden="true"></div><div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap hero-grid"><div class="hero-copy">
+<p class="eyebrow"><span class="live-dot"></span>ไดอารี่มด <span class="eyebrow-line"></span> iOS</p>
+<h1>โลกใบเล็ก<br><em>กลยุทธ์ที่ยิ่งใหญ่</em></h1>
+<p class="hero-category">เกมจำลองอาณานิคมมดและวางกลยุทธ์แบบเรียลไทม์</p>
+<p class="hero-intro">&quot;Ant&#x27;s Diary&quot; เป็นเกมกลยุทธ์แบบเรียลไทม์ที่คุณเลี้ยงดูอาณานิคมมด ปรับบทบาทของมดงานรอบมดราชินี ฝ่าฟันการโจมตีของศัตรู และสร้างอาณานิคมที่รุ่งเรือง 100 ตัว</p>
+<div class="hero-actions"><a class="store-button " data-cta="hero" href="https://apps.apple.com/app/id6760652790?l=th"><span>ดาวน์โหลดบน App Store</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#worlds">สำรวจเกม<span aria-hidden="true"> ↓</span></a></div>
+<p class="requirements">ฟรี · มีโฆษณา<span> / </span>สำหรับ iPhone<span> / </span>iOS 17.0+</p>
+</div><div class="hero-visual">
+<span class="giant-number" aria-hidden="true">100</span>
+<div class="phone phone-back"><img class="" src="assets/screenshots/th/1_nest_after.webp" alt="การขยายรังและห้อง" width="720" height="1564" loading="eager" decoding="async" fetchpriority=high></div>
+<div class="phone phone-front"><img class="" src="assets/screenshots/th/2_gameplay.webp" alt="สำรวจ 2 โลก" width="720" height="1564" loading="eager" decoding="async" fetchpriority=high></div>
+<div class="orbit-label"><span aria-hidden="true">↗</span> เกมกลยุทธ์เลี้ยงมด 100 ตัว</div>
+</div></div><a class="scroll-cue" href="#worlds" aria-label="สำรวจเกม"><span></span>↓</a></section>
+<div class="fact-strip"><div class="wrap facts">
+<div><strong>100</strong><span>เกมกลยุทธ์เลี้ยงมด 100 ตัว</span></div>
+<div><strong>04</strong><span>4 บทบาทในการวางกลยุทธ์</span></div>
+<div><strong>02</strong><span>สำรวจ 2 โลก</span></div>
+<div><strong>06</strong><span>พิชิตยศของคุณ</span></div>
+</div></div>
+<section id="worlds" class="section wrap worlds">
+<div class="section-heading"><div><p class="eyebrow">01 <span class="eyebrow-line"></span> สำรวจ 2 โลก</p><h2>สร้างรัง<br>สืบต่อชีวิต</h2></div><div class="section-lead"><h3>การขยายรังและห้อง</h3><p>จัดมดงานไปขุด รังจะขยายอย่างเป็นธรรมชาติจากทางเดินเดิม และสร้างห้องเก็บอาหารหรือห้องเลี้ยงตัวอ่อนโดยอัตโนมัติตามความจำเป็น</p></div></div>
+<div class="world-grid"><figure class="world-card surface"><div class="world-image"><img class="" src="assets/screenshots/th/2_gameplay.webp" alt="พื้นผิว: โลกอันตรายที่เก็บอาหารและสู้กับศัตรู" width="720" height="1564" loading="lazy" decoding="async" ></div><figcaption><span class="world-index">01 /</span><p>พื้นผิว: โลกอันตรายที่เก็บอาหารและสู้กับศัตรู</p></figcaption></figure>
+<figure class="world-card underground"><div class="world-image"><img class="" src="assets/screenshots/th/1_nest_after.webp" alt="รัง: สถานที่ปลอดภัยสำหรับเลี้ยงตัวอ่อนและขุดห้องขยายรัง" width="720" height="1564" loading="lazy" decoding="async" ></div><figcaption><span class="world-index">02 /</span><p>รัง: สถานที่ปลอดภัยสำหรับเลี้ยงตัวอ่อนและขุดห้องขยายรัง</p></figcaption></figure></div>
+<p class="world-footnote">ห้องจะเพิ่มความจุอาหารและตัวอ่อน เมื่อคลังอาหารเต็ม มดหาอาหารจะรอและกลับไปทำงานโดยอัตโนมัติเมื่อมีที่ว่าง</p>
+</section>
+<section id="strategy" class="strategy-section"><div class="wrap section">
+<p class="eyebrow">02 <span class="eyebrow-line"></span> 4 บทบาทในการวางกลยุทธ์</p><div class="section-heading"><h2>4 หน้าที่<br>ตัดสินชัยชนะ</h2><p class="section-lead">การปรับสัดส่วนบทบาทให้เหมาะกับสถานการณ์คือกุญแจสู่การอยู่รอด</p></div>
+<div class="roles"><article class="role role-0"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21C3 10 12 4 24 5c1 10-5 20-14 16M7 24 20 10M13 18l-1-6m5 2 6-1"/></svg><span class="role-number">01</span><h3>มดหาอาหาร (เขียว)</h3><p>เก็บอาหารบนพื้นผิวและขนกลับรัง</p></article><article class="role role-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 26S3 19 3 10a7 7 0 0 1 13-3 7 7 0 0 1 13 3c0 9-13 16-13 16Z"/></svg><span class="role-number">02</span><h3>มดพี่เลี้ยง (ชมพู)</h3><p>เลี้ยงตัวอ่อนให้เติบโตเป็นมดงานใหม่</p></article><article class="role role-2"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 4v8c0 7-11 14-11 14S5 22 5 15V7Z"/></svg><span class="role-number">03</span><h3>มดทหาร (แดง)</h3><p>สู้กับศัตรูและปกป้องอาณานิคม</p></article><article class="role role-3"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m6 27 17-18M12 4c7-2 13 1 16 8M16 4l12 12"/></svg><span class="role-number">04</span><h3>มดขุด</h3><p>ขุดเพื่อขยายรัง — ห้องที่สร้างเสร็จจะเพิ่มความจุอาหารและตัวอ่อน</p></article></div>
+<div class="queen"><span class="queen-symbol" aria-hidden="true">♛</span><div><h3>พลังราชินี: เสี่ยงสูง ผลตอบแทนสูง</h3><p>เพิ่มพลังราชินีเพื่อวางไข่เร็วขึ้นสูงสุด 3 เท่า แต่ราชินีจะหิวเร็วขึ้นสูงสุด 8 เท่า และพี่เลี้ยงต้องป้อนอาหารราชินี ขนไข่ และดูแลตัวอ่อน ปรับพลังตามสภาพรัง</p></div><div class="queen-numbers" aria-hidden="true"><b>3×</b><span>↔</span><b>8×</b></div></div>
+</div></section>
+<section class="section wrap combat"><div class="combat-art"><img class="" src="assets/screenshots/th/4_combat.webp" alt="ป้องกันการโจมตีของศัตรู" width="720" height="1564" loading="lazy" decoding="async" ><span class="combat-ring" aria-hidden="true"></span></div><div class="combat-copy"><p class="eyebrow">03 <span class="eyebrow-line"></span> ป้องกันการโจมตีของศัตรู</p><h2>จะสร้างให้ถึง<br>100 ตัวอย่างไร?</h2><p>เมื่อเวลาผ่านไป การโจมตีของศัตรูจะรุนแรงขึ้น เตรียมเพิ่มมดทหารล่วงหน้า</p><div class="combat-rule"></div><h3>ปกป้องมดราชินี สร้างอาณานิคม 100 ตัว!</h3><p>การปรับสัดส่วนบทบาทให้เหมาะกับสถานการณ์คือกุญแจสู่การอยู่รอด</p><a class="store-button " data-cta="combat" href="https://apps.apple.com/app/id6760652790?l=th"><span>ดาวน์โหลดบน App Store</span><span aria-hidden="true">↗</span></a></div></section>
+<section id="challenge" class="challenge-section"><div class="section wrap challenge-grid"><div><p class="eyebrow">04 <span class="eyebrow-line"></span> ท้าทายสกอร์แอทแทค</p><h2>ทำเวลาให้ดีที่สุด<br>คว้าฉายาให้ได้</h2><h3>พิชิตยศของคุณ</h3><p>เวลาที่ใช้ไปถึง 100 ตัวจะกำหนดยศ 1 ใน 6 ระดับ ทำให้ได้ต่ำกว่า 15 นาทีเพื่อเป็น &quot;ราชินีเทพนิยาย&quot; แชร์ผลลัพธ์เป็นการ์ดที่ลวดลายเปลี่ยนไปตามยศ</p><h3>ท้าทายสกอร์แอทแทค</h3><p>เวลาที่ใช้ถึง 100 ตัวคือคะแนนของคุณ ตั้งเป้าทำเวลาที่ดีที่สุด ท้าทายซ้ำแล้วซ้ำเล่า!</p><div class="goal-number" aria-hidden="true">100<span> / ANTS</span></div></div><div class="victory-art"><div class="victory-halo" aria-hidden="true"></div><div class="phone"><img class="" src="assets/screenshots/th/5_victory.webp" alt="พิชิตยศของคุณ" width="720" height="1564" loading="lazy" decoding="async" ></div></div></div></section>
+<section class="download-section wrap"><img class="ant-portrait" src="assets/ant.webp" width="192" height="192" alt="" loading="lazy"><p class="eyebrow">ไดอารี่มด</p><h2>จะสร้างให้ถึง<br>100 ตัวอย่างไร?</h2><p>ปกป้องมดราชินี สร้างอาณานิคม 100 ตัว!</p><a class="store-button " data-cta="footer" href="https://apps.apple.com/app/id6760652790?l=th"><span>ดาวน์โหลดบน App Store</span><span aria-hidden="true">↗</span></a><p class="requirements">ฟรี · มีโฆษณา / สำหรับ iPhone / iOS 17.0+</p></section>
+</main>
+<footer class="footer wrap"><a class="brand" href="index-th.html"><img src="assets/icon.webp" alt="" width="32" height="32"><span>ไดอารี่มด</span></a><div class="footer-links"><a href="support-th.html" >ช่วยเหลือ</a><a href="privacy-policy-th.html" >นโยบายความเป็นส่วนตัว</a><a href="#languages">ภาษา</a></div><small>© 2026 Nobuaki Kuwabara</small></footer>
+<div id="languages" class="all-languages wrap" aria-label="ภาษา"><a lang="ja" hreflang="ja" href="index.html" >日本語</a><a lang="en" hreflang="en" href="index-en.html" >English</a><a lang="ar" hreflang="ar" href="index-ar.html" >العربية</a><a lang="ca" hreflang="ca" href="index-ca.html" >Català</a><a lang="cs" hreflang="cs" href="index-cs.html" >Čeština</a><a lang="da" hreflang="da" href="index-da.html" >Dansk</a><a lang="de" hreflang="de" href="index-de.html" >Deutsch</a><a lang="el" hreflang="el" href="index-el.html" >Ελληνικά</a><a lang="es" hreflang="es" href="index-es.html" >Español</a><a lang="es-MX" hreflang="es-MX" href="index-es-MX.html" >Español (México)</a><a lang="fi" hreflang="fi" href="index-fi.html" >Suomi</a><a lang="fr" hreflang="fr" href="index-fr.html" >Français</a><a lang="he" hreflang="he" href="index-he.html" >עברית</a><a lang="hi" hreflang="hi" href="index-hi.html" >हिन्दी</a><a lang="hr" hreflang="hr" href="index-hr.html" >Hrvatski</a><a lang="hu" hreflang="hu" href="index-hu.html" >Magyar</a><a lang="id" hreflang="id" href="index-id.html" >Bahasa Indonesia</a><a lang="it" hreflang="it" href="index-it.html" >Italiano</a><a lang="ko" hreflang="ko" href="index-ko.html" >한국어</a><a lang="ms" hreflang="ms" href="index-ms.html" >Bahasa Melayu</a><a lang="nl" hreflang="nl" href="index-nl.html" >Nederlands</a><a lang="nb" hreflang="nb" href="index-no.html" >Norsk bokmål</a><a lang="pl" hreflang="pl" href="index-pl.html" >Polski</a><a lang="pt-BR" hreflang="pt-BR" href="index-pt-BR.html" >Português (Brasil)</a><a lang="pt-PT" hreflang="pt-PT" href="index-pt-PT.html" >Português (Portugal)</a><a lang="ro" hreflang="ro" href="index-ro.html" >Română</a><a lang="ru" hreflang="ru" href="index-ru.html" >Русский</a><a lang="sk" hreflang="sk" href="index-sk.html" >Slovenčina</a><a lang="sv" hreflang="sv" href="index-sv.html" >Svenska</a><a lang="th" hreflang="th" href="index-th.html" aria-current=page>ไทย</a><a lang="tr" hreflang="tr" href="index-tr.html" >Türkçe</a><a lang="uk" hreflang="uk" href="index-uk.html" >Українська</a><a lang="vi" hreflang="vi" href="index-vi.html" >Tiếng Việt</a><a lang="zh-Hans" hreflang="zh-Hans" href="index-zh-Hans.html" >简体中文</a><a lang="zh-Hant" hreflang="zh-Hant" href="index-zh-Hant.html" >繁體中文</a></div>
+<div class="mobile-download"><img src="assets/icon.webp" width="40" height="40" alt=""><div><strong>ไดอารี่มด</strong><small>ฟรี · มีโฆษณา</small></div><a class="store-button small" data-cta="mobile" href="https://apps.apple.com/app/id6760652790?l=th"><span>ดาวน์โหลดบน App Store</span><span aria-hidden="true">↗</span></a></div>
+</body></html>

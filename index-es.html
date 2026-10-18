@@ -1,100 +1,111 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diario de Hormigas - Juego de estrategia para criar 100 hormigas</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 20px; }
-        .container { max-width: 720px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 30px; text-align: center; }
-        h1 { font-size: 2em; margin-bottom: 10px; }
-        .subtitle { font-size: 1.1em; opacity: 0.95; }
-        .content { padding: 40px 30px; }
-        .section { margin-bottom: 35px; }
-        h2 { color: #667eea; margin-bottom: 15px; font-size: 1.4em; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
-        p { margin-bottom: 15px; }
-        ul, ol { margin-left: 20px; margin-bottom: 15px; }
-        li { margin-bottom: 8px; }
-        .highlight { background: #f8f9fa; padding: 15px; border-left: 4px solid #667eea; border-radius: 4px; margin: 20px 0; }
-        .faq-item { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea; }
-        .faq-question { font-weight: 600; color: #764ba2; margin-bottom: 10px; font-size: 1.1em; }
-        .faq-answer { color: #555; }
-        .feature { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
-        .feature h3 { color: #764ba2; margin-bottom: 10px; }
-        .contact-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; }
-        .contact-button { display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; margin-top: 15px; transition: transform 0.2s; }
-        .contact-button:hover { transform: scale(1.05); }
-        footer { background: #f8f9fa; padding: 30px; text-align: center; border-top: 1px solid #e9ecef; }
-        .footer-links { margin-top: 20px; }
-        .footer-links a { color: #667eea; text-decoration: none; margin: 0 15px; font-weight: 500; }
-        .footer-links a:hover { text-decoration: underline; }
-        .app-icon { font-size: 3em; margin-bottom: 15px; }
-        .last-updated { color: #6c757d; font-size: 0.9em; margin-top: 30px; text-align: right; }
-        a { color: #667eea; }
-        .lang-switcher { text-align: center; padding: 10px; background: #f0f0f0; font-size: 0.85em; }
-        .lang-switcher a { color: #667eea; text-decoration: none; margin: 0 6px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diario de Hormigas | Simulador de colonias de hormigas y estrategia en tiempo real</title>
+<meta name="description" content="Simulador de colonias de hormigas y estrategia en tiempo real. ¡Protege a la reina y construye una colonia de 100 hormigas!">
+<meta name="theme-color" content="#0d1c18">
+<meta name="apple-itunes-app" content="app-id=6760652790">
+<link rel="canonical" href="https://ki-84.github.io/ants_diary_support/index-es.html">
+<link rel="sitemap" type="application/xml" href="https://ki-84.github.io/ants_diary_support/sitemap.xml">
+<link rel="alternate" hreflang="ja" href="https://ki-84.github.io/ants_diary_support/">
+<link rel="alternate" hreflang="en" href="https://ki-84.github.io/ants_diary_support/index-en.html">
+<link rel="alternate" hreflang="ar" href="https://ki-84.github.io/ants_diary_support/index-ar.html">
+<link rel="alternate" hreflang="ca" href="https://ki-84.github.io/ants_diary_support/index-ca.html">
+<link rel="alternate" hreflang="cs" href="https://ki-84.github.io/ants_diary_support/index-cs.html">
+<link rel="alternate" hreflang="da" href="https://ki-84.github.io/ants_diary_support/index-da.html">
+<link rel="alternate" hreflang="de" href="https://ki-84.github.io/ants_diary_support/index-de.html">
+<link rel="alternate" hreflang="el" href="https://ki-84.github.io/ants_diary_support/index-el.html">
+<link rel="alternate" hreflang="es" href="https://ki-84.github.io/ants_diary_support/index-es.html">
+<link rel="alternate" hreflang="es-MX" href="https://ki-84.github.io/ants_diary_support/index-es-MX.html">
+<link rel="alternate" hreflang="fi" href="https://ki-84.github.io/ants_diary_support/index-fi.html">
+<link rel="alternate" hreflang="fr" href="https://ki-84.github.io/ants_diary_support/index-fr.html">
+<link rel="alternate" hreflang="he" href="https://ki-84.github.io/ants_diary_support/index-he.html">
+<link rel="alternate" hreflang="hi" href="https://ki-84.github.io/ants_diary_support/index-hi.html">
+<link rel="alternate" hreflang="hr" href="https://ki-84.github.io/ants_diary_support/index-hr.html">
+<link rel="alternate" hreflang="hu" href="https://ki-84.github.io/ants_diary_support/index-hu.html">
+<link rel="alternate" hreflang="id" href="https://ki-84.github.io/ants_diary_support/index-id.html">
+<link rel="alternate" hreflang="it" href="https://ki-84.github.io/ants_diary_support/index-it.html">
+<link rel="alternate" hreflang="ko" href="https://ki-84.github.io/ants_diary_support/index-ko.html">
+<link rel="alternate" hreflang="ms" href="https://ki-84.github.io/ants_diary_support/index-ms.html">
+<link rel="alternate" hreflang="nl" href="https://ki-84.github.io/ants_diary_support/index-nl.html">
+<link rel="alternate" hreflang="nb" href="https://ki-84.github.io/ants_diary_support/index-no.html">
+<link rel="alternate" hreflang="pl" href="https://ki-84.github.io/ants_diary_support/index-pl.html">
+<link rel="alternate" hreflang="pt-BR" href="https://ki-84.github.io/ants_diary_support/index-pt-BR.html">
+<link rel="alternate" hreflang="pt-PT" href="https://ki-84.github.io/ants_diary_support/index-pt-PT.html">
+<link rel="alternate" hreflang="ro" href="https://ki-84.github.io/ants_diary_support/index-ro.html">
+<link rel="alternate" hreflang="ru" href="https://ki-84.github.io/ants_diary_support/index-ru.html">
+<link rel="alternate" hreflang="sk" href="https://ki-84.github.io/ants_diary_support/index-sk.html">
+<link rel="alternate" hreflang="sv" href="https://ki-84.github.io/ants_diary_support/index-sv.html">
+<link rel="alternate" hreflang="th" href="https://ki-84.github.io/ants_diary_support/index-th.html">
+<link rel="alternate" hreflang="tr" href="https://ki-84.github.io/ants_diary_support/index-tr.html">
+<link rel="alternate" hreflang="uk" href="https://ki-84.github.io/ants_diary_support/index-uk.html">
+<link rel="alternate" hreflang="vi" href="https://ki-84.github.io/ants_diary_support/index-vi.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://ki-84.github.io/ants_diary_support/index-zh-Hans.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://ki-84.github.io/ants_diary_support/index-zh-Hant.html">
+<link rel="alternate" hreflang="pt" href="https://ki-84.github.io/ants_diary_support/index-pt-PT.html">
+<link rel="alternate" hreflang="x-default" href="https://ki-84.github.io/ants_diary_support/index-en.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diario de Hormigas | Simulador de colonias de hormigas y estrategia en tiempo real">
+<meta property="og:description" content="Simulador de colonias de hormigas y estrategia en tiempo real. ¡Protege a la reina y construye una colonia de 100 hormigas!">
+<meta property="og:url" content="https://ki-84.github.io/ants_diary_support/index-es.html">
+<meta property="og:image" content="https://ki-84.github.io/ants_diary_support/assets/og-es-ES.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Diario de Hormigas — Simulador de colonias de hormigas y estrategia en tiempo real">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/site.css?v=20261018">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Diario de Hormigas", "url": "https://ki-84.github.io/ants_diary_support/index-es.html", "description": "Simulador de colonias de hormigas y estrategia en tiempo real. ¡Protege a la reina y construye una colonia de 100 hormigas!", "applicationCategory": "GameApplication", "applicationSubCategory": "Strategy", "operatingSystem": "iOS 17.0 or later", "inLanguage": "es", "installUrl": "https://apps.apple.com/app/id6760652790?l=es", "image": "https://ki-84.github.io/ants_diary_support/assets/icon.webp", "screenshot": ["https://ki-84.github.io/ants_diary_support/assets/screenshots/es-ES/2_gameplay.webp", "https://ki-84.github.io/ants_diary_support/assets/screenshots/es-ES/1_nest_after.webp", "https://ki-84.github.io/ants_diary_support/assets/screenshots/es-ES/5_victory.webp"], "author": {"@type": "Person", "name": "Nobuaki Kuwabara"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/app/id6760652790?l=es"}}</script>
+<script src="assets/site.js?v=20261018" defer></script>
 </head>
 <body>
-    <div class="lang-switcher"><a href="index.html">日本語</a> | <a href="index-en.html">English</a> | <a href="index-zh-Hans.html">简体中文</a> | <a href="index-zh-Hant.html">繁體中文</a> | <a href="index-ko.html">한국어</a> | <a href="index-th.html">ไทย</a> | <a href="index-es.html">Español</a> | <a href="index-fr.html">Français</a> | <a href="index-de.html">Deutsch</a> | <a href="index-pt-BR.html">Português</a> | <a href="index-it.html">Italiano</a></div>
-    <div class="container">
-        <header>
-            <div class="app-icon" style="font-size:4em;margin-bottom:20px">🐜</div>
-            <h1>Diario de Hormigas</h1>
-            <p class="subtitle">Juego de estrategia para criar una colonia de 100 hormigas</p>
-        </header>
-
-        <div class="content">
-            <div class="section">
-                <h2>Sobre el juego</h2>
-                <p>"Diario de Hormigas" es un auténtico juego de estrategia en tiempo real. Ajusta los roles de las hormigas obreras, supera ataques enemigos y construye una colonia de 100 hormigas mientras proteges a la reina.</p>
-            </div>
-
-            <div class="section">
-                <h2>Características</h2>
-                <div class="feature">
-                    <h3>🐜 4 roles para tu estrategia</h3>
-                    <ul><li><strong>Recolectoras (verde)</strong>: Recogen comida en la superficie</li><li><strong>Nodrizas (rosa)</strong>: Crían larvas para nuevas obreras</li><li><strong>Soldados (rojo)</strong>: Luchan contra enemigos</li><li><strong>Descanso (azul)</strong>: Recuperan energía en el nido</li></ul>
-                </div>
-
-                <div class="feature">
-                    <h3>🗺 Superficie y nido</h3>
-                    <ul><li><strong>Superficie</strong>: Recolección de comida y enemigos</li><li><strong>Nido</strong>: Crianza y expansión segura</li></ul><p>Alterna entre ambas vistas para gestionar toda la colonia.</p>
-                </div>
-
-                <div class="feature">
-                    <h3>⚔️ Defiende de oleadas</h3>
-                    <p>Los ataques enemigos se intensifican con el tiempo. ¡Prepara tus soldados!</p>
-                </div>
-
-                <div class="feature">
-                    <h3>⏱ Desafío de puntuación</h3>
-                    <p>Tu tiempo para llegar a 100 hormigas es tu puntuación. ¡Intenta batir tu récord!</p>
-                </div>
-
-
-            </div>
-
-            <div class="section">
-                <h2>Recomendado para</h2>
-                <ul><li>Amantes de hormigas e insectos</li><li>Fans de juegos de estrategia en tiempo real</li><li>Jugadores casuales</li><li>Amantes de la gestión de recursos</li></ul>
-            </div>
-
-            <div class="section">
-                <h2>Flujo del juego</h2>
-                <ol><li>La reina pone huevos continuamente</li><li>Las nodrizas crían larvas hasta ser obreras</li><li>Las recolectoras obtienen comida</li><li>Los soldados protegen la colonia</li></ol><p style='margin-top:15px'>¡Mantén el equilibrio y alcanza las 100 hormigas!</p><p>Juego de estrategia rápido. ¡5-15 minutos por partida!</p>
-            </div>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Diario de Hormigas. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="support-es.html">Soporte</a>
-                <a href="privacy-policy-es.html">Política de Privacidad</a>
-            </div>
-        </footer>
-    </div>
-</body>
-</html>
+<a class="skip-link" href="#main">Descubre el juego</a>
+<header class="header"><div class="nav wrap">
+<a class="brand" href="index-es.html" aria-label="Diario de Hormigas"><img src="assets/icon.webp" alt="" width="40" height="40"><span>Diario de Hormigas</span></a>
+<nav aria-label="Descubre el juego"><a class="nav-explore" href="#worlds">Descubre el juego</a>
+<details class="languages"><summary><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span>Español</span><span aria-hidden="true">⌄</span></summary><div class="language-menu" aria-label="Idioma"><a lang="ja" hreflang="ja" href="index.html" >日本語</a><a lang="en" hreflang="en" href="index-en.html" >English</a><a lang="ar" hreflang="ar" href="index-ar.html" >العربية</a><a lang="ca" hreflang="ca" href="index-ca.html" >Català</a><a lang="cs" hreflang="cs" href="index-cs.html" >Čeština</a><a lang="da" hreflang="da" href="index-da.html" >Dansk</a><a lang="de" hreflang="de" href="index-de.html" >Deutsch</a><a lang="el" hreflang="el" href="index-el.html" >Ελληνικά</a><a lang="es" hreflang="es" href="index-es.html" aria-current=page>Español</a><a lang="es-MX" hreflang="es-MX" href="index-es-MX.html" >Español (México)</a><a lang="fi" hreflang="fi" href="index-fi.html" >Suomi</a><a lang="fr" hreflang="fr" href="index-fr.html" >Français</a><a lang="he" hreflang="he" href="index-he.html" >עברית</a><a lang="hi" hreflang="hi" href="index-hi.html" >हिन्दी</a><a lang="hr" hreflang="hr" href="index-hr.html" >Hrvatski</a><a lang="hu" hreflang="hu" href="index-hu.html" >Magyar</a><a lang="id" hreflang="id" href="index-id.html" >Bahasa Indonesia</a><a lang="it" hreflang="it" href="index-it.html" >Italiano</a><a lang="ko" hreflang="ko" href="index-ko.html" >한국어</a><a lang="ms" hreflang="ms" href="index-ms.html" >Bahasa Melayu</a><a lang="nl" hreflang="nl" href="index-nl.html" >Nederlands</a><a lang="nb" hreflang="nb" href="index-no.html" >Norsk bokmål</a><a lang="pl" hreflang="pl" href="index-pl.html" >Polski</a><a lang="pt-BR" hreflang="pt-BR" href="index-pt-BR.html" >Português (Brasil)</a><a lang="pt-PT" hreflang="pt-PT" href="index-pt-PT.html" >Português (Portugal)</a><a lang="ro" hreflang="ro" href="index-ro.html" >Română</a><a lang="ru" hreflang="ru" href="index-ru.html" >Русский</a><a lang="sk" hreflang="sk" href="index-sk.html" >Slovenčina</a><a lang="sv" hreflang="sv" href="index-sv.html" >Svenska</a><a lang="th" hreflang="th" href="index-th.html" >ไทย</a><a lang="tr" hreflang="tr" href="index-tr.html" >Türkçe</a><a lang="uk" hreflang="uk" href="index-uk.html" >Українська</a><a lang="vi" hreflang="vi" href="index-vi.html" >Tiếng Việt</a><a lang="zh-Hans" hreflang="zh-Hans" href="index-zh-Hans.html" >简体中文</a><a lang="zh-Hant" hreflang="zh-Hant" href="index-zh-Hant.html" >繁體中文</a></div></details>
+</nav></div></header>
+<main id="main">
+<section class="hero"><div class="hero-glow" aria-hidden="true"></div><div class="fireflies" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap hero-grid"><div class="hero-copy">
+<p class="eyebrow"><span class="live-dot"></span>Diario de Hormigas <span class="eyebrow-line"></span> iOS</p>
+<h1>Un mundo pequeño.<br><em>Una gran estrategia.</em></h1>
+<p class="hero-category">Simulador de colonias de hormigas y estrategia en tiempo real</p>
+<p class="hero-intro">&quot;Ant&#x27;s Diary&quot; es un juego de estrategia en tiempo real donde crías una colonia de hormigas. Ajusta los roles de las obreras alrededor de la reina, supera los ataques enemigos y construye una colonia próspera de 100 hormigas.</p>
+<div class="hero-actions"><a class="store-button " data-cta="hero" href="https://apps.apple.com/app/id6760652790?l=es"><span>Descargar en el App Store</span><span aria-hidden="true">↗</span></a><a class="text-link" href="#worlds">Descubre el juego<span aria-hidden="true"> ↓</span></a></div>
+<p class="requirements">Gratis · Contiene anuncios<span> / </span>Para iPhone<span> / </span>iOS 17.0+</p>
+</div><div class="hero-visual">
+<span class="giant-number" aria-hidden="true">100</span>
+<div class="phone phone-back"><img class="" src="assets/screenshots/es-ES/1_nest_after.webp" alt="Expansión del nido y cámaras" width="720" height="1564" loading="eager" decoding="async" fetchpriority=high></div>
+<div class="phone phone-front"><img class="" src="assets/screenshots/es-ES/2_gameplay.webp" alt="Explora 2 mundos" width="720" height="1564" loading="eager" decoding="async" fetchpriority=high></div>
+<div class="orbit-label"><span aria-hidden="true">↗</span> Colonia de 100 hormigas</div>
+</div></div><a class="scroll-cue" href="#worlds" aria-label="Descubre el juego"><span></span>↓</a></section>
+<div class="fact-strip"><div class="wrap facts">
+<div><strong>100</strong><span>Colonia de 100 hormigas</span></div>
+<div><strong>04</strong><span>4 roles para diseñar tu estrategia</span></div>
+<div><strong>02</strong><span>Explora 2 mundos</span></div>
+<div><strong>06</strong><span>Consigue tu rango</span></div>
+</div></div>
+<section id="worlds" class="section wrap worlds">
+<div class="section-heading"><div><p class="eyebrow">01 <span class="eyebrow-line"></span> Explora 2 mundos</p><h2>Haz crecer el nido.<br>Mantén viva la colonia.</h2></div><div class="section-lead"><h3>Expansión del nido y cámaras</h3><p>Asigna obreras a excavar y el nido crecerá de forma orgánica desde los túneles existentes. Se crearán almacenes de comida o cámaras de cría según sea necesario.</p></div></div>
+<div class="world-grid"><figure class="world-card surface"><div class="world-image"><img class="" src="assets/screenshots/es-ES/2_gameplay.webp" alt="Superficie: Un mundo peligroso donde recolectas comida y luchas contra enemigos" width="720" height="1564" loading="lazy" decoding="async" ></div><figcaption><span class="world-index">01 /</span><p>Superficie: Un mundo peligroso donde recolectas comida y luchas contra enemigos</p></figcaption></figure>
+<figure class="world-card underground"><div class="world-image"><img class="" src="assets/screenshots/es-ES/1_nest_after.webp" alt="Nido: Un refugio seguro para criar larvas y excavar nuevas cámaras" width="720" height="1564" loading="lazy" decoding="async" ></div><figcaption><span class="world-index">02 /</span><p>Nido: Un refugio seguro para criar larvas y excavar nuevas cámaras</p></figcaption></figure></div>
+<p class="world-footnote">Las cámaras aumentan la capacidad de comida y cría. Si el almacén está lleno, las recolectoras esperan y reanudan el trabajo automáticamente cuando queda espacio.</p>
+</section>
+<section id="strategy" class="strategy-section"><div class="wrap section">
+<p class="eyebrow">02 <span class="eyebrow-line"></span> 4 roles para diseñar tu estrategia</p><div class="section-heading"><h2>Cuatro funciones.<br>Una estrategia ganadora.</h2><p class="section-lead">Ajustar el equilibrio de roles según la situación es la clave de la supervivencia.</p></div>
+<div class="roles"><article class="role role-0"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21C3 10 12 4 24 5c1 10-5 20-14 16M7 24 20 10M13 18l-1-6m5 2 6-1"/></svg><span class="role-number">01</span><h3>Recolectoras (Verde)</h3><p>Recogen comida en la superficie y la llevan al nido</p></article><article class="role role-1"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 26S3 19 3 10a7 7 0 0 1 13-3 7 7 0 0 1 13 3c0 9-13 16-13 16Z"/></svg><span class="role-number">02</span><h3>Nodrizas (Rosa)</h3><p>Alimentan larvas para criar nuevas obreras</p></article><article class="role role-2"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 4v8c0 7-11 14-11 14S5 22 5 15V7Z"/></svg><span class="role-number">03</span><h3>Soldados (Rojo)</h3><p>Luchan contra enemigos y defienden la colonia</p></article><article class="role role-3"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m6 27 17-18M12 4c7-2 13 1 16 8M16 4l12 12"/></svg><span class="role-number">04</span><h3>Excavación</h3><p>Excava para ampliar el nido — Completar cámaras aumenta la capacidad de comida y cría</p></article></div>
+<div class="queen"><span class="queen-symbol" aria-hidden="true">♛</span><div><h3>Poder de la Reina: gran riesgo, gran recompensa</h3><p>Aumenta el Poder de la Reina para poner huevos hasta 3 veces más rápido. A cambio, su hambre crece hasta 8 veces más rápido y las nodrizas deben alimentarla, transportar huevos y cuidar larvas. Ajusta el poder según la colonia.</p></div><div class="queen-numbers" aria-hidden="true"><b>3×</b><span>↔</span><b>8×</b></div></div>
+</div></section>
+<section class="section wrap combat"><div class="combat-art"><img class="" src="assets/screenshots/es-ES/4_combat.webp" alt="Defiende contra los ataques enemigos" width="720" height="1564" loading="lazy" decoding="async" ><span class="combat-ring" aria-hidden="true"></span></div><div class="combat-copy"><p class="eyebrow">03 <span class="eyebrow-line"></span> Defiende contra los ataques enemigos</p><h2>¿Cómo llegarás<br>a 100?</h2><p>Con el tiempo, los ataques enemigos se intensifican. ¡Prepárate aumentando tus soldados con antelación!</p><div class="combat-rule"></div><h3>¡Protege a la reina y construye una colonia de 100 hormigas!</h3><p>Ajustar el equilibrio de roles según la situación es la clave de la supervivencia.</p><a class="store-button " data-cta="combat" href="https://apps.apple.com/app/id6760652790?l=es"><span>Descargar en el App Store</span><span aria-hidden="true">↗</span></a></div></section>
+<section id="challenge" class="challenge-section"><div class="section wrap challenge-grid"><div><p class="eyebrow">04 <span class="eyebrow-line"></span> Desafío de puntuación</p><h2>Bate el récord.<br>Gana tu título.</h2><h3>Consigue tu rango</h3><p>El tiempo que tardes en llegar a 100 hormigas decide cuál de los 6 rangos obtienes. Baja de 15 minutos para ser Reina Mítica. Comparte el resultado en una tarjeta cuyo diseño cambia con tu rango.</p><h3>Desafío de puntuación</h3><p>El tiempo hasta llegar a 100 hormigas es tu puntuación. ¡Apunta al récord más rápido y vuelve a intentarlo!</p><div class="goal-number" aria-hidden="true">100<span> / ANTS</span></div></div><div class="victory-art"><div class="victory-halo" aria-hidden="true"></div><div class="phone"><img class="" src="assets/screenshots/es-ES/5_victory.webp" alt="Consigue tu rango" width="720" height="1564" loading="lazy" decoding="async" ></div></div></div></section>
+<section class="download-section wrap"><img class="ant-portrait" src="assets/ant.webp" width="192" height="192" alt="" loading="lazy"><p class="eyebrow">Diario de Hormigas</p><h2>¿Cómo llegarás<br>a 100?</h2><p>¡Protege a la reina y construye una colonia de 100 hormigas!</p><a class="store-button " data-cta="footer" href="https://apps.apple.com/app/id6760652790?l=es"><span>Descargar en el App Store</span><span aria-hidden="true">↗</span></a><p class="requirements">Gratis · Contiene anuncios / Para iPhone / iOS 17.0+</p></section>
+</main>
+<footer class="footer wrap"><a class="brand" href="index-es.html"><img src="assets/icon.webp" alt="" width="32" height="32"><span>Diario de Hormigas</span></a><div class="footer-links"><a href="support-es.html" >Soporte</a><a href="privacy-policy-es.html" >Política de privacidad</a><a href="#languages">Idioma</a></div><small>© 2026 Nobuaki Kuwabara</small></footer>
+<div id="languages" class="all-languages wrap" aria-label="Idioma"><a lang="ja" hreflang="ja" href="index.html" >日本語</a><a lang="en" hreflang="en" href="index-en.html" >English</a><a lang="ar" hreflang="ar" href="index-ar.html" >العربية</a><a lang="ca" hreflang="ca" href="index-ca.html" >Català</a><a lang="cs" hreflang="cs" href="index-cs.html" >Čeština</a><a lang="da" hreflang="da" href="index-da.html" >Dansk</a><a lang="de" hreflang="de" href="index-de.html" >Deutsch</a><a lang="el" hreflang="el" href="index-el.html" >Ελληνικά</a><a lang="es" hreflang="es" href="index-es.html" aria-current=page>Español</a><a lang="es-MX" hreflang="es-MX" href="index-es-MX.html" >Español (México)</a><a lang="fi" hreflang="fi" href="index-fi.html" >Suomi</a><a lang="fr" hreflang="fr" href="index-fr.html" >Français</a><a lang="he" hreflang="he" href="index-he.html" >עברית</a><a lang="hi" hreflang="hi" href="index-hi.html" >हिन्दी</a><a lang="hr" hreflang="hr" href="index-hr.html" >Hrvatski</a><a lang="hu" hreflang="hu" href="index-hu.html" >Magyar</a><a lang="id" hreflang="id" href="index-id.html" >Bahasa Indonesia</a><a lang="it" hreflang="it" href="index-it.html" >Italiano</a><a lang="ko" hreflang="ko" href="index-ko.html" >한국어</a><a lang="ms" hreflang="ms" href="index-ms.html" >Bahasa Melayu</a><a lang="nl" hreflang="nl" href="index-nl.html" >Nederlands</a><a lang="nb" hreflang="nb" href="index-no.html" >Norsk bokmål</a><a lang="pl" hreflang="pl" href="index-pl.html" >Polski</a><a lang="pt-BR" hreflang="pt-BR" href="index-pt-BR.html" >Português (Brasil)</a><a lang="pt-PT" hreflang="pt-PT" href="index-pt-PT.html" >Português (Portugal)</a><a lang="ro" hreflang="ro" href="index-ro.html" >Română</a><a lang="ru" hreflang="ru" href="index-ru.html" >Русский</a><a lang="sk" hreflang="sk" href="index-sk.html" >Slovenčina</a><a lang="sv" hreflang="sv" href="index-sv.html" >Svenska</a><a lang="th" hreflang="th" href="index-th.html" >ไทย</a><a lang="tr" hreflang="tr" href="index-tr.html" >Türkçe</a><a lang="uk" hreflang="uk" href="index-uk.html" >Українська</a><a lang="vi" hreflang="vi" href="index-vi.html" >Tiếng Việt</a><a lang="zh-Hans" hreflang="zh-Hans" href="index-zh-Hans.html" >简体中文</a><a lang="zh-Hant" hreflang="zh-Hant" href="index-zh-Hant.html" >繁體中文</a></div>
+<div class="mobile-download"><img src="assets/icon.webp" width="40" height="40" alt=""><div><strong>Diario de Hormigas</strong><small>Gratis · Contiene anuncios</small></div><a class="store-button small" data-cta="mobile" href="https://apps.apple.com/app/id6760652790?l=es"><span>Descargar en el App Store</span><span aria-hidden="true">↗</span></a></div>
+</body></html>
